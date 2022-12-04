@@ -31,41 +31,22 @@ public class ProductList extends AppCompatActivity {
         setContentView(R.layout.product_list);
 
         arrayProducts = new ArrayList<>();
-        dbHelper = new DBHelper(this);
         productService = new ProductService();
-
-        //Se usa try y catch para conectarse a DB
-
-        try {
-
-            dbHelper = new DBHelper(this);
-           /* byte[] img = "".getBytes();
-            //Se insertan datos manualmente hasta crear formulario para llenar DB
-            dbHelper.insertData("Chocorramo","Ponquecito", "1200",img);
-            dbHelper.insertData("Chocorramo","Ponquecito", "1300",img);
-            dbHelper.insertData("Chocorramo","Ponquecito", "1400",img);
-
-            */
-            productService = new ProductService();
-            Cursor cursor = dbHelper.getData();
-            arrayProducts = productService.cursorToArray(cursor);
-
-
-        }catch (Exception e){
-            Log.e("Database",e.toString());
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-        }
-
-        /*
-//Cuando no hay base de datos se crea una pequena lista de productos
+        //Cuando no hay base de datos se crea una pequena lista de productos
         Product product1 = new Product(R.drawable.product1,"Milky Way","Chocolatina",2500);
         Product product2 = new Product(R.drawable.product2, "M&M's", "Chocolates", 6000);
         Product product3 = new Product(R.drawable.product3, "Chocorramo", "Pastel", 2300);
+        Product product4 = new Product(R.drawable.product3, "Ferrero", "Chocolates", 24500);
+        Product product5 = new Product(R.drawable.product3, "Barquillos Pirulin", "Chocolates", 11200);
+        Product product6 = new Product(R.drawable.product3, "Brownies Mama-Ia", "Pastel", 12000);
 
         arrayProducts.add(product1);
         arrayProducts.add(product2);
         arrayProducts.add(product3);
-*/
+        arrayProducts.add(product4);
+        arrayProducts.add(product5);
+        arrayProducts.add(product6);
+
 
         productAdapter = new ProductAdapter(this, arrayProducts);
         productListView = (ListView) findViewById(R.id.productListView);
@@ -78,3 +59,22 @@ public class ProductList extends AppCompatActivity {
 
 
 }
+
+           /*
+            //Se insertan datos manualmente hasta crear formulario para llenar DB
+            byte[] img = "".getBytes();
+            dbHelper.insertData("Chocorramo","Ponquecito", "1200",img);
+            dbHelper.insertData("Chocorramo","Ponquecito", "1300",img);
+            dbHelper.insertData("Chocorramo","Ponquecito", "1400",img);
+            */
+
+        /*
+//Cuando no hay base de datos se crea una pequena lista de productos
+        Product product1 = new Product(R.drawable.product1,"Milky Way","Chocolatina",2500);
+        Product product2 = new Product(R.drawable.product2, "M&M's", "Chocolates", 6000);
+        Product product3 = new Product(R.drawable.product3, "Chocorramo", "Pastel", 2300);
+
+        arrayProducts.add(product1);
+        arrayProducts.add(product2);
+        arrayProducts.add(product3);
+*/
