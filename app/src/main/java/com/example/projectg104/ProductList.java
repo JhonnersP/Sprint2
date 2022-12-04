@@ -36,9 +36,9 @@ public class ProductList extends AppCompatActivity {
         Product product1 = new Product(R.drawable.product1,"Milky Way","Chocolatina",2500);
         Product product2 = new Product(R.drawable.product2, "M&M's", "Chocolates", 6000);
         Product product3 = new Product(R.drawable.product3, "Chocorramo", "Pastel", 2300);
-        Product product4 = new Product(R.drawable.product3, "Ferrero", "Chocolates", 24500);
-        Product product5 = new Product(R.drawable.product3, "Barquillos Pirulin", "Chocolates", 11200);
-        Product product6 = new Product(R.drawable.product3, "Brownies Mama-Ia", "Pastel", 12000);
+        Product product4 = new Product(R.drawable.product4, "Ferrero", "Chocolates", 24500);
+        Product product5 = new Product(R.drawable.product5, "Barquillos Pirulin", "Chocolates", 11200);
+        Product product6 = new Product(R.drawable.product6, "Brownies Mama-Ia", "Pastel", 12000);
 
         arrayProducts.add(product1);
         arrayProducts.add(product2);
